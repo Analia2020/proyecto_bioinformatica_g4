@@ -26,32 +26,35 @@ El objetivo principal es identificar genes diferencialmente expresados (DEGs) en
 ---
 
 ## 🗂️ Estructura del Repositorio
+
+```
 proyecto_bioinformatica_g4/
 │
-├── 📁 data/                    # Datos del proyecto
-│   ├── raw/                    # Datos crudos descargados de GEO
-│   ├── processed/              # Datos normalizados y filtrados
-│   └── metadata.csv            # Información de las muestras
+├── 📁 data/                         # Datos del proyecto
+│   ├── raw/                         # Datos crudos descargados de GEO
+│   ├── processed/                   # Datos normalizados y filtrados
+│   └── metadata.csv                 # Información de las muestras
 │
-├── 📁 src/                     # Scripts del análisis
-│   ├── 01_descarga_datos.R     # Descarga de datos desde GEO
-│   ├── 02_preprocesamiento.R   # Control de calidad y normalización
-│   ├── 03_expresion_diferencial.R  # Análisis DESeq2
-│   └── 04_visualizacion.R      # Volcano plot, heatmap, PCA
+├── 📁 src/                          # Scripts del análisis
+│   ├── 01_descarga_datos.R          # Descarga de datos desde GEO
+│   ├── 02_preprocesamiento.R        # Control de calidad y normalización
+│   ├── 03_expresion_diferencial.R   # Análisis DESeq2
+│   └── 04_visualizacion.R          # Volcano plot, heatmap, PCA
 │
-├── 📁 notebooks/               # Notebooks explicativos
-│   └── analisis_exploratorio.ipynb
+├── 📁 notebooks/                    # Notebooks explicativos
+│   └── analisis_exploratorio.md    # Exploración inicial del dataset
 │
-├── 📁 results/                 # Resultados generados
-│   ├── figures/                # Gráficos y visualizaciones
-│   └── tables/                 # Tablas de genes diferenciales
+├── 📁 results/                      # Resultados generados
+│   ├── figures/                     # Gráficos y visualizaciones
+│   └── tables/                      # Tablas de genes diferenciales
 │
-├── 📁 docs/                    # Documentación adicional
-│   └── informe_analisis.md     # Informe del análisis
+├── 📁 docs/                         # Documentación adicional
+│   └── informe_analisis.md          # Informe del análisis
 │
-├── README.md                   # Este archivo
-├── LICENSE                     # Licencia MIT
-└── .gitignore                  # Archivos ignorados por Git
+├── README.md                        # Este archivo
+├── LICENSE                          # Licencia MIT
+└── .gitignore                       # Archivos ignorados por Git
+```
 
 ---
 
