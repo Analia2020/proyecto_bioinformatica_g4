@@ -8,3 +8,5 @@ Este repositorio contiene el desarrollo de la actividad grupal correspondiente a
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python)
 
 ## 📋 Descripción del Proyecto
+
+Este repositorio contiene el pipeline completo para el análisis de expresión génica diferencial en muestras de cáncer de mama utilizando datos de secuenciación de ARN (RNA-Seq). 
