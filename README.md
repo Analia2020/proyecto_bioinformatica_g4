@@ -9,4 +9,4 @@ Este repositorio contiene el desarrollo de la actividad grupal correspondiente a
 
 ## 📋 Descripción del Proyecto
 
-Este repositorio contiene el pipeline completo para el análisis de expresión génica diferencial en muestras de cáncer de mama utilizando datos de secuenciación de ARN (RNA-Seq). 
+Este repositorio contiene el pipeline completo para el análisis de expresión génica diferencial en muestras de cáncer de mama utilizando datos de secuenciación de ARN (RNA-Seq). Los datos provienen del repositorio público **GEO (Gene Expression Omnibus)** del NCBI.
