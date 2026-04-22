@@ -3,3 +3,4 @@ Este repositorio contiene el desarrollo de la actividad grupal correspondiente a
 # 🧬 Análisis de Expresión Génica Diferencial en Cáncer de Mama (RNA-Seq)
 
 ![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-blue)
