@@ -106,3 +106,48 @@ resultados_df <- as.data.frame(resultados) %>%
 
 message("  Resumen de resultados:")
 summary(resultados)
+
+# --- 7. Filtrar genes significativos -----------------------------------------
+
+# Criterios: p-valor ajustado < 0.05 y |log2FoldChange| > 1
+DEGs <- resultados_df %>%
+  filter(!is.na(padj)) %>%
+  filter(padj < 0.05, abs(log2FoldChange) > 1)
+
+# Separar en sobreexpresados y subexpresados
+sobreexpresados <- DEGs %>% filter(log2FoldChange > 1) %>% arrange(desc(log2FoldChange))
+subexpresados   <- DEGs %>% filter(log2FoldChange < -1) %>% arrange(log2FoldChange)
+
+message("\n===== GENES DIFERENCIALMENTE EXPRESADOS =====")
+message("Total DEGs encontrados  : ", nrow(DEGs))
+message("  Sobreexpresados (tumor): ", nrow(sobreexpresados))
+message("  Subexpresados (tumor)  : ", nrow(subexpresados))
+message("===============================================\n")
+
+# --- 8. Guardar resultados ---------------------------------------------------
+
+dir_tablas <- "results/tables/"
+if (!dir.exists(dir_tablas)) dir.create(dir_tablas, recursive = TRUE)
+
+# Todos los resultados
+write.csv(resultados_df,
+          file = file.path(dir_tablas, "todos_los_genes_resultados.csv"),
+          row.names = FALSE)
+
+# Solo DEGs significativos
+write.csv(DEGs,
+          file = file.path(dir_tablas, "genes_diferenciales_significativos.csv"),
+          row.names = FALSE)
+
+# Top 20 sobreexpresados
+write.csv(head(sobreexpresados, 20),
+          file = file.path(dir_tablas, "top20_sobreexpresados.csv"),
+          row.names = FALSE)
+
+# Top 20 subexpresados
+write.csv(head(subexpresados, 20),
+          file = file.path(dir_tablas, "top20_subexpresados.csv"),
+          row.names = FALSE)
+
+message("Tablas guardadas en: results/tables/")
+message("Script 03 completado exitosamente.")
