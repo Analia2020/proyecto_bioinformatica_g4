@@ -89,3 +89,23 @@ message("  Normalización log2 completada.")
 message("  Rango de valores normalizados: ",
         round(min(matriz_normalizada), 2), " a ",
         round(max(matriz_normalizada), 2))
+
+# --- 6. Guardar datos procesados ---------------------------------------------
+
+dir_processed <- "data/processed/"
+if (!dir.exists(dir_processed)) dir.create(dir_processed, recursive = TRUE)
+
+ruta_normalizada <- file.path(dir_processed, "matriz_expresion_normalizada.csv")
+write.csv(matriz_normalizada, file = ruta_normalizada, row.names = TRUE)
+message("\nDatos normalizados guardados en: ", ruta_normalizada)
+
+# --- 7. Resumen final --------------------------------------------------------
+
+message("\n===== RESUMEN PREPROCESAMIENTO =====")
+message("Genes originales   : ", nrow(matriz_cruda))
+message("Genes filtrados    : ", nrow(matriz_filtrada))
+message("Muestras analizadas: ", ncol(matriz_filtrada))
+message("Normalización      : log2(x + 1)")
+message("=====================================\n")
+
+message("Script 02 completado exitosamente.")
