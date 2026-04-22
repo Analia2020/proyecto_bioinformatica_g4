@@ -46,3 +46,15 @@ gse <- getGEO(
 )
 
 message("Descarga completada.")
+# --- 4. Explorar la estructura del objeto descargado -------------------------
+
+# Ver cuántas series de expresión hay
+message("Número de series en el objeto: ", length(gse))
+
+# Acceder a la primera serie
+eset <- gse[[1]]
+
+# Ver dimensiones (genes x muestras)
+message("Dimensiones de la matriz de expresión:")
+message("  Genes: ", nrow(eset))
+message("  Muestras: ", ncol(eset))
