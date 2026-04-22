@@ -77,3 +77,15 @@ matriz_filtrada <- matriz_cruda[genes_activos, ]
 message("  Genes antes del filtrado : ", nrow(matriz_cruda))
 message("  Genes después del filtrado: ", nrow(matriz_filtrada))
 message("  Genes eliminados          : ", nrow(matriz_cruda) - nrow(matriz_filtrada))
+
+# --- 5. Normalización --------------------------------------------------------
+
+message("\nNormalizando datos...")
+
+# Normalización log2 (añadir pseudoconteo de 1 para evitar log(0))
+matriz_normalizada <- log2(matriz_filtrada + 1)
+
+message("  Normalización log2 completada.")
+message("  Rango de valores normalizados: ",
+        round(min(matriz_normalizada), 2), " a ",
+        round(max(matriz_normalizada), 2))
