@@ -124,3 +124,22 @@ source("src/04_visualizacion.R")
 - Informe completo en `docs/informe_analisis.md`
 
 ---
+
+## 👥 Autores
+
+| Nombre | Rol | Contacto |
+|--------|-----|---------|
+| Caren Moreno | Análisis bioinformático | carennicole.mor9513@comunidadunir.net |
+| Analia Pastrana | Análisis bioinformático | analiaveronica.7701@comunidadunir.net |
+
+**Institución:** UNIR - Máster en Bioinformática  
+**Asignatura:** Introducción a la Programación Científica  
+**Grupo:** 4
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la **Licencia MIT**. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
