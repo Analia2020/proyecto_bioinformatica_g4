@@ -25,3 +25,9 @@ matriz_cruda <- read.csv(
   row.names = 1,
   check.names = FALSE
 )
+
+metadata <- read.csv("data/metadata.csv", row.names = 1)
+
+message("Datos cargados:")
+message("  Genes    : ", nrow(matriz_cruda))
+message("  Muestras : ", ncol(matriz_cruda))
