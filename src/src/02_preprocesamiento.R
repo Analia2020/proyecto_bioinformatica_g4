@@ -9,3 +9,9 @@ r# =============================================================================
 # filtra genes con baja expresión y normaliza la matriz de expresión
 # para su uso en el análisis diferencial.
 # =============================================================================
+
+# --- 1. Cargar librerías -----------------------------------------------------
+
+library(DESeq2)
+library(dplyr)
+library(ggplot2)
