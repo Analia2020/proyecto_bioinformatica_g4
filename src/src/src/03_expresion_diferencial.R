@@ -78,3 +78,31 @@ dds <- DESeqDataSetFromMatrix(
 )
 
 message("  Objeto DESeq2 creado exitosamente.")
+
+# --- 5. Ejecutar análisis diferencial ----------------------------------------
+
+message("\nEjecutando análisis de expresión diferencial...")
+message("  Esto puede tardar unos minutos...")
+
+dds <- DESeq(dds)
+
+message("  Análisis completado.")
+
+# --- 6. Extraer resultados ---------------------------------------------------
+
+message("\nExtrayendo resultados...")
+
+# Comparación: tumor vs. normal
+resultados <- results(
+  dds,
+  contrast  = c("condicion", "tumor", "normal"),
+  alpha     = 0.05
+)
+
+# Convertir a data frame y ordenar por p-valor ajustado
+resultados_df <- as.data.frame(resultados) %>%
+  tibble::rownames_to_column("gen") %>%
+  arrange(padj)
+
+message("  Resumen de resultados:")
+summary(resultados)
