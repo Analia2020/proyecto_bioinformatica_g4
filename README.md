@@ -55,3 +55,16 @@ proyecto_bioinformatica_g4/
 └── .gitignore                  # Archivos ignorados por Git
 
 ---
+
+## 🔬 Dataset Utilizado
+
+| Campo | Información |
+|-------|-------------|
+| **Fuente** | NCBI Gene Expression Omnibus (GEO) |
+| **Acceso** | GSE45827 |
+| **Organismo** | *Homo sapiens* |
+| **Tipo de datos** | RNA-Seq (mRNA) |
+| **Condiciones** | Tejido tumoral vs. tejido sano |
+| **Número de muestras** | 130 muestras |
+
+---
