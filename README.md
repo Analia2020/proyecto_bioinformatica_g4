@@ -114,3 +114,13 @@ source("src/04_visualizacion.R")
 ```
 
 ---
+
+## 📊 Resultados Esperados
+
+- Lista de genes diferencialmente expresados (DEGs)
+- Volcano plot mostrando genes up/down regulados
+- Heatmap de los top 50 genes más variables
+- Análisis de componentes principales (PCA)
+- Informe completo en `docs/informe_analisis.md`
+
+---
