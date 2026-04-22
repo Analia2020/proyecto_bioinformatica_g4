@@ -4,3 +4,4 @@ Este repositorio contiene el desarrollo de la actividad grupal correspondiente a
 
 ![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)
 ![Licencia](https://img.shields.io/badge/Licencia-MIT-blue)
+![R](https://img.shields.io/badge/R-4.0%2B-276DC3?logo=r)
