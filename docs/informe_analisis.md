@@ -132,4 +132,4 @@ en el script de descarga.
 ---
 
 *Informe generado como parte de la actividad grupal de la asignatura 
-Introducción a la Programación Científica — UNIR 2025*
+Introducción a la Programación Científica - UNIR 2025*
