@@ -19,3 +19,17 @@ if (!requireNamespace("GEOquery", quietly = TRUE))
   BiocManager::install("GEOquery")
 
 library(GEOquery)
+
+# --- 2. Definir parámetros del estudio ---------------------------------------
+
+# Número de acceso en GEO
+GEO_ID <- "GSE45827"
+
+# Directorio donde se guardarán los datos crudos
+dir_raw <- "data/raw/"
+
+# Crear el directorio si no existe
+if (!dir.exists(dir_raw)) {
+  dir.create(dir_raw, recursive = TRUE)
+  message("Directorio creado: ", dir_raw)
+}
