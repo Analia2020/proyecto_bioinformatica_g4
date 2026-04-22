@@ -30,3 +30,51 @@ metadata <- read.csv("data/metadata.csv", row.names = 1)
 message("Datos cargados correctamente.")
 message("  Genes    : ", nrow(matriz_normalizada))
 message("  Muestras : ", ncol(matriz_normalizada))
+
+# --- 3. Definir condiciones experimentales -----------------------------------
+
+message("\nDefiniendo condiciones experimentales...")
+
+# Clasificar muestras en: tumor vs. normal
+# Se busca la columna que contiene el tipo de tejido
+columna_condicion <- grep("tissue|condition|source", 
+                          colnames(metadata), 
+                          ignore.case = TRUE, 
+                          value = TRUE)[1]
+
+if (!is.na(columna_condicion)) {
+  condiciones <- metadata[[columna_condicion]]
+} else {
+  # Si no se encuentra automáticamente, asignar manualmente
+  message("  Columna de condición no detectada automáticamente.")
+  message("  Asignando condiciones manualmente basado en el nombre de muestra...")
+  condiciones <- ifelse(grepl("tumor|cancer|T", colnames(matriz_normalizada), 
+                               ignore.case = TRUE), "tumor", "normal")
+}
+
+# Crear tabla de diseño experimental
+diseno <- data.frame(
+  muestra   = colnames(matriz_normalizada),
+  condicion = factor(condiciones)
+)
+
+message("  Muestras por condición:")
+print(table(diseno$condicion))
+
+# --- 4. Crear objeto DESeq2 --------------------------------------------------
+
+message("\nCreando objeto DESeq2...")
+
+# Convertir a enteros (DESeq2 requiere conteos enteros)
+conteos <- round(2^matriz_normalizada - 1)
+conteos <- as.matrix(conteos)
+storage.mode(conteos) <- "integer"
+
+# Crear objeto DESeqDataSet
+dds <- DESeqDataSetFromMatrix(
+  countData = conteos,
+  colData   = diseno,
+  design    = ~ condicion
+)
+
+message("  Objeto DESeq2 creado exitosamente.")
