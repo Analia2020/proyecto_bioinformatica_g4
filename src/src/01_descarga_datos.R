@@ -9,3 +9,5 @@ r# =============================================================================
 # GEO (Gene Expression Omnibus) usando el acceso GSE45827.
 # Los datos corresponden a muestras de tejido tumoral y tejido sano de mama.
 # =============================================================================
+
+# --- 1. Instalar y cargar librerías necesarias -------------------------------
