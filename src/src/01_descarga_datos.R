@@ -58,3 +58,13 @@ eset <- gse[[1]]
 message("Dimensiones de la matriz de expresión:")
 message("  Genes: ", nrow(eset))
 message("  Muestras: ", ncol(eset))
+
+# --- 5. Extraer y guardar la matriz de expresión -----------------------------
+
+# Matriz de expresión (genes en filas, muestras en columnas)
+matriz_expresion <- exprs(eset)
+
+# Guardar como CSV
+ruta_salida <- file.path(dir_raw, "matriz_expresion_cruda.csv")
+write.csv(matriz_expresion, file = ruta_salida, row.names = TRUE)
+message("Matriz de expresión guardada en: ", ruta_salida)
