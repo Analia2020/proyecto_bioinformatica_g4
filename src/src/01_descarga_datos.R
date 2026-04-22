@@ -68,3 +68,13 @@ matriz_expresion <- exprs(eset)
 ruta_salida <- file.path(dir_raw, "matriz_expresion_cruda.csv")
 write.csv(matriz_expresion, file = ruta_salida, row.names = TRUE)
 message("Matriz de expresión guardada en: ", ruta_salida)
+
+# --- 6. Extraer y guardar los metadatos de las muestras ----------------------
+
+# Información de las muestras (metadata)
+metadata <- pData(eset)
+
+# Guardar metadatos
+ruta_metadata <- "data/metadata.csv"
+write.csv(metadata, file = ruta_metadata, row.names = TRUE)
+message("Metadatos guardados en: ", ruta_metadata)
