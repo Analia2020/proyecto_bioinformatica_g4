@@ -60,3 +60,20 @@ boxplot(
 )
 dev.off()
 message("  Boxplot guardado en: ", file.path(dir_figuras, "boxplot_calidad_crudo.png"))
+
+# --- 4. Filtrado de genes con baja expresión ---------------------------------
+
+message("\nFiltrando genes con baja expresión...")
+
+# Mantener solo genes con expresión media > 1 en al menos el 20% de las muestras
+umbral_expresion  <- 1
+umbral_porcentaje <- 0.20
+
+genes_activos <- rowSums(matriz_cruda > umbral_expresion) >=
+  (ncol(matriz_cruda) * umbral_porcentaje)
+
+matriz_filtrada <- matriz_cruda[genes_activos, ]
+
+message("  Genes antes del filtrado : ", nrow(matriz_cruda))
+message("  Genes después del filtrado: ", nrow(matriz_filtrada))
+message("  Genes eliminados          : ", nrow(matriz_cruda) - nrow(matriz_filtrada))
