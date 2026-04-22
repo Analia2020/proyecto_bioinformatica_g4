@@ -84,3 +84,33 @@ pip install pandas numpy matplotlib seaborn jupyter
 ```
 
 ---
+
+## ▶️ Cómo Reproducir el Análisis
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/[usuario]/proyecto_bioinformatica_g4.git
+cd proyecto_bioinformatica_g4
+```
+
+2. Descargar los datos ejecutando:
+```r
+source("src/01_descarga_datos.R")
+```
+
+3. Preprocesar y normalizar:
+```r
+source("src/02_preprocesamiento.R")
+```
+
+4. Ejecutar el análisis de expresión diferencial:
+```r
+source("src/03_expresion_diferencial.R")
+```
+
+5. Generar visualizaciones:
+```r
+source("src/04_visualizacion.R")
+```
+
+---
