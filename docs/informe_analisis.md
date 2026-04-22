@@ -1,7 +1,7 @@
-# Informe de Análisis — Expresión Génica Diferencial en Cáncer de Mama
+# Informe de Análisis - Expresión Génica Diferencial en Cáncer de Mama
 
-**Proyecto:** Análisis RNA-Seq — Grupo 4  
-**Asignatura:** Introducción a la Programación Científica — UNIR  
+**Proyecto:** Análisis RNA-Seq - Grupo 4  
+**Asignatura:** Introducción a la Programación Científica - UNIR  
 **Fecha:** 22/04/2025  
 
 ---
