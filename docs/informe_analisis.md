@@ -2,7 +2,7 @@
 
 **Proyecto:** Análisis RNA-Seq - Grupo 4  
 **Asignatura:** Introducción a la Programación Científica - UNIR  
-**Fecha:** 22/04/2025  
+**Fecha:** 22/04/2026  
 
 ---
 
