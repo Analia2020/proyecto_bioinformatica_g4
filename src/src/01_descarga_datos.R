@@ -16,3 +16,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
 if (!requireNamespace("GEOquery", quietly = TRUE))
+  BiocManager::install("GEOquery")
+
+library(GEOquery)
