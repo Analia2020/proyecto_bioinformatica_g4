@@ -44,3 +44,5 @@ gse <- getGEO(
   GSEMatrix = TRUE,
   AnnotGPL = FALSE
 )
+
+message("Descarga completada.")
