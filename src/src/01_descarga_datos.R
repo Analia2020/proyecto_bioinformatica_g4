@@ -78,3 +78,14 @@ metadata <- pData(eset)
 ruta_metadata <- "data/metadata.csv"
 write.csv(metadata, file = ruta_metadata, row.names = TRUE)
 message("Metadatos guardados en: ", ruta_metadata)
+
+# --- 7. Resumen del dataset --------------------------------------------------
+
+message("\n===== RESUMEN DEL DATASET =====")
+message("GEO ID         : ", GEO_ID)
+message("Total genes    : ", nrow(matriz_expresion))
+message("Total muestras : ", ncol(matriz_expresion))
+message("Tipos de tejido: ", paste(unique(metadata$`characteristics_ch1`), collapse = ", "))
+message("================================\n")
+
+message("Script 01 completado exitosamente.")
