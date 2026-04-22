@@ -16,3 +16,8 @@ El objetivo principal es identificar genes diferencialmente expresados (DEGs) en
 ---
 
 ## 🎯 Objetivos
+
+- Descargar y preprocesar datos de RNA-Seq de acceso público (GEO)
+- Realizar control de calidad de las lecturas crudas
+- Normalizar los datos de expresión génica
+- Identificar genes diferencialmente expresados con **DESeq2**
