@@ -21,3 +21,8 @@ El objetivo principal es identificar genes diferencialmente expresados (DEGs) en
 - Realizar control de calidad de las lecturas crudas
 - Normalizar los datos de expresión génica
 - Identificar genes diferencialmente expresados con **DESeq2**
+
+---
+
+## 🗂️ Estructura del Repositorio
+proyecto_bioinformatica_g4/
