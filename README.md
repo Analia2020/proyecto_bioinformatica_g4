@@ -68,3 +68,19 @@ proyecto_bioinformatica_g4/
 | **Número de muestras** | 130 muestras |
 
 ---
+
+## 🛠️ Herramientas y Dependencias
+
+### R (versión 4.0+)
+```r
+install.packages("BiocManager")
+BiocManager::install(c("DESeq2", "edgeR", "limma"))
+install.packages(c("ggplot2", "pheatmap", "EnhancedVolcano", "dplyr"))
+```
+
+### Python (versión 3.8+)
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+---
