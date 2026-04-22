@@ -15,3 +15,13 @@ r# =============================================================================
 library(DESeq2)
 library(dplyr)
 library(ggplot2)
+
+# --- 2. Cargar los datos crudos ----------------------------------------------
+
+message("Cargando datos crudos...")
+
+matriz_cruda <- read.csv(
+  "data/raw/matriz_expresion_cruda.csv",
+  row.names = 1,
+  check.names = FALSE
+)
