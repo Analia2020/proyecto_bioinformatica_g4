@@ -11,3 +11,8 @@ r# =============================================================================
 # =============================================================================
 
 # --- 1. Instalar y cargar librerías necesarias -------------------------------
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+if (!requireNamespace("GEOquery", quietly = TRUE))
