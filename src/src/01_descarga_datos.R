@@ -33,3 +33,14 @@ if (!dir.exists(dir_raw)) {
   dir.create(dir_raw, recursive = TRUE)
   message("Directorio creado: ", dir_raw)
 }
+
+# --- 3. Descargar los datos desde GEO ----------------------------------------
+
+message("Descargando datos de GEO: ", GEO_ID, "...")
+
+gse <- getGEO(
+  GEO = GEO_ID,
+  destdir = dir_raw,
+  GSEMatrix = TRUE,
+  AnnotGPL = FALSE
+)
